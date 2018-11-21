@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: uat
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001:8671/eureka/
+server:
+  port: 9000
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug
